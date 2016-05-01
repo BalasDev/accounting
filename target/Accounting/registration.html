@@ -1,0 +1,40 @@
+<div ng-controller="RegController">
+    <md-content layout-padding>
+        <div>
+            <form name="userForm">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>First name</label>
+                        <input ng-model="user.firstName">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Second Name</label>
+                        <input ng-model="user.secondName">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Last Name</label>
+                        <input ng-model="user.lastName">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Login</label>
+                        <input ng-model="user.login">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Password</label>
+                        <input type="password" ng-model="user.password">
+                    </md-input-container>
+                    <md-input-container>
+                            <label>Email</label>
+                            <input ng-model="user.email" type="email">
+                    </md-input-container>
+
+                    <md-datepicker ng-model="user.birthday" md-placeholder="Birthday">
+                    </md-datepicker>
+
+                </div>
+                <md-button ng-click="reg()"> Register </md-button>
+            </form>
+        </div>
+    </md-content>
+       
+</div>

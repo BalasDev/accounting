@@ -1,0 +1,38 @@
+<div ng-controller="LoginController" ng-cloak>
+
+    <md-content layout-padding layout-row>
+        <div>
+
+
+            <div flex-xs flex-gt-xs="50">
+                <md-card class="layout-padding">
+                    <form name="loginForm">
+                        <md-input-container class="md-block">
+                            <label>Login</label>
+                            <input md-maxlength="20" required md-no-asterisk name="login" ng-model="user.login">
+                            <div ng-messages="loginForm.login.$error">
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Password</label>
+                            <input type="password" required name="password" ng-model="user.password"
+                                   class="password-field">
+                            <div ng-messages="loginForm.password.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+
+                        </md-input-container>
+                        <md-button ng-click="login()"> login</md-button>
+
+                    </form>
+                    {{authenticated}}
+                </md-card>
+            </div>
+
+        </div>
+    </md-content>
+
+
+</div>
